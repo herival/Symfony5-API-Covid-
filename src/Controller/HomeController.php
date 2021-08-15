@@ -16,7 +16,7 @@ class HomeController extends AbstractController
      */
     public function index(CallApiService $callApiService): Response
     {
-        dump($callApiService->getFranceData());
+        // dump($callApiService->getFranceData());
         return $this->render('home/index.html.twig', [
             'data' => $callApiService->getFranceData(),
         ]);
