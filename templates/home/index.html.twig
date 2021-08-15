@@ -5,15 +5,17 @@
 {% block body %}
     <h2 class="h2 text-center">LES CHIFFRES DU COVID-19</h2>
     <div class="container">
+        {% if data.FranceGlobalLiveData %}
+            
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">Libellé</th>
                 <th scope="col">Chiffres</th>
-
+                
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <tr>
                 <th scope="row">date</th>
                 <td>{{data.FranceGlobalLiveData.0.date}}</td>
@@ -38,8 +40,13 @@
                 <th scope="row">Gueris</th>
                 <td>{{data.FranceGlobalLiveData.0.gueris}}</td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-    {% endblock %}
+        </tbody>
+    </table>
+    {% else %}
+ 
+        <div class="mt-5 text-center">Erreur! l'API ne reponds pas, veuillez reactualiser ulterieurment</div>
+
+    {% endif %}
+</div>
+{% endblock %}
 
