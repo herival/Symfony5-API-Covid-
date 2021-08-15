@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h2 class="h2 text-center">LES CHIFFRES DU COVID-19</h2>
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Libellé</th>
+                <th scope="col">Chiffres</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">date</th>
+                <td>{{data.FranceGlobalLiveData.0.date}}</td>
+            </tr>
+            <tr>
+                <th scope="row">hospitalisés</th>
+                <td>{{data.FranceGlobalLiveData.0.hospitalises}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Reanimation</th>
+                <td>{{data.FranceGlobalLiveData.0.reanimation}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Nouvelles Hospitalisations</th>
+                <td>{{data.FranceGlobalLiveData.0.nouvellesHospitalisations}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Deces</th>
+                <td>{{data.FranceGlobalLiveData.0.deces}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Gueris</th>
+                <td>{{data.FranceGlobalLiveData.0.gueris}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+
